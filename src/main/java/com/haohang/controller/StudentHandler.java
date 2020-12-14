@@ -22,4 +22,9 @@ public class StudentHandler {
     public void add(@RequestBody Student student) {
         studentService.add(student);
     }
+
+    @PutMapping("update")
+    public void update(@RequestBody Student student) {
+        studentService.update(student);
+    }
 }

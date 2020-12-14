@@ -10,4 +10,8 @@
         insert into student(name, gender, age) values (#{name}, #{gender}, #{age})
     </insert>
 
+    <update id="update" parameterType="student">
+        update student set name = #{name}, gender = #{gender}, age = #{age} where id = #{id}
+    </update>
+
 </mapper>

@@ -22,4 +22,10 @@ public class StudentServiceImpl implements StudentService {
     public void add(Student student) {
         studentRepository.add(student);
     }
+
+    @Override
+    public void update(Student student) {
+        // 要处理的业务逻辑
+        studentRepository.update(student);
+    }
 }
