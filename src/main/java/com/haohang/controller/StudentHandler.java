@@ -18,6 +18,11 @@ public class StudentHandler {
         return studentService.findAll();
     }
 
+    @GetMapping("/findById/{id}")
+    public Student findById(@PathVariable("id") Integer id) {
+        return studentService.findById(id);
+    }
+
     @PostMapping("/add")
     public void add(@RequestBody Student student) {
         studentService.add(student);

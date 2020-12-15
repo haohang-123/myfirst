@@ -8,4 +8,5 @@ public interface StudentRepository {
     List<Student> findAll();
     void add(Student student);
     void update(Student student);
+    Student findById(Integer id);
 }

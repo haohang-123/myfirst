@@ -28,4 +28,9 @@ public class StudentServiceImpl implements StudentService {
         // 要处理的业务逻辑
         studentRepository.update(student);
     }
+
+    @Override
+    public Student findById(int id) {
+        return studentRepository.findById(id);
+    }
 }

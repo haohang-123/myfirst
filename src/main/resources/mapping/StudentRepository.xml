@@ -14,4 +14,7 @@
         update student set name = #{name}, gender = #{gender}, age = #{age} where id = #{id}
     </update>
 
+    <select id="findById" parameterType="java.lang.Integer" resultType="student">
+        select id, name, gender, age from student where id = #{id}
+    </select>
 </mapper>
