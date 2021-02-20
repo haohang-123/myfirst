@@ -6,7 +6,8 @@ import java.util.List;
 
 public interface StudentService {
     List<Student> findAll();
-    void add(Student student);
-    void update(Student student);
+    int add(Student student);
+    int update(Student student);
     Student findById(int id);
+    int delete(int id);
 }

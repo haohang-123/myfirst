@@ -6,7 +6,7 @@
         select * from student
     </select>
 
-    <insert id="add" parameterType="student">
+    <insert id="add" parameterType="student" useGeneratedKeys="true" keyProperty="id">
         insert into student(name, gender, age) values (#{name}, #{gender}, #{age})
     </insert>
 
@@ -17,4 +17,8 @@
     <select id="findById" parameterType="java.lang.Integer" resultType="student">
         select id, name, gender, age from student where id = #{id}
     </select>
+
+    <delete id="delete" parameterType="java.lang.Integer">
+        delete from student where id = #{id}
+    </delete>
 </mapper>

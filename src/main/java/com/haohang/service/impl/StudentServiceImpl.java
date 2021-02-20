@@ -19,18 +19,23 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void add(Student student) {
-        studentRepository.add(student);
+    public int add(Student student) {
+        return studentRepository.add(student);
     }
 
     @Override
-    public void update(Student student) {
+    public int update(Student student) {
         // 要处理的业务逻辑
-        studentRepository.update(student);
+        return studentRepository.update(student);
     }
 
     @Override
     public Student findById(int id) {
         return studentRepository.findById(id);
+    }
+
+    @Override
+    public int delete(int id) {
+        return studentRepository.delete(id);
     }
 }
